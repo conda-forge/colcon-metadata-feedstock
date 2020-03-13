@@ -1,17 +1,17 @@
 {% set name = "colcon-metadata" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://github.com/colcon/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 6c00b5b95fee0028e49923724bcf0a66c8a61509c4d33b1589f5b73dc096af49
+  sha256: 33e2a982a5a1fea2617012dc9f937cb4acd9f261d0e461956099b1accccb6fd3
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
